@@ -10,7 +10,12 @@ hamburger.addEventListener('mouseenter', _ => {
   if (hamburger.classList.contains('js-xmenu')) {
     return;
   }
-  tlm.staggerTo(lines, 0.125, { scaleX: 1.5, repeat: 1, yoyo: true }, 0.3);
+  tlm.staggerTo(
+    lines,
+    0.125,
+    { scaleX: 1.5, repeat: 1, yoyo: true, ease: Power2.easeInOut },
+    0.125
+  );
 });
 
 toggleMenu
@@ -18,13 +23,18 @@ toggleMenu
   .to(
     lineOne,
     0.125,
-    { rotation: 45, transformOrigin: '50% 50%', y: 22 },
+    { rotation: 45, transformOrigin: '50% 50%', y: 22, ease: Power2.easeInOut },
     'cross'
   )
   .to(
     lineThree,
     0.125,
-    { rotation: -45, transformOrigin: '50% 50%', y: -22 },
+    {
+      rotation: -45,
+      transformOrigin: '50% 50%',
+      y: -22,
+      ease: Power2.easeInOut
+    },
     'cross'
   );
 
