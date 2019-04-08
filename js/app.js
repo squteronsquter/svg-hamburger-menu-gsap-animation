@@ -1,3 +1,5 @@
+// SVG animation of Hamburger Menu
+
 const hamburger = document.querySelector('.hamburger');
 const lineOne = hamburger.querySelector('.line-one');
 const lineTwo = hamburger.querySelector('.line-two');
