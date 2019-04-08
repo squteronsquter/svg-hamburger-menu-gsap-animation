@@ -13,7 +13,13 @@ hamburger.addEventListener('mouseenter', _ => {
   tlm.staggerTo(
     lines,
     0.125,
-    { scaleX: 1.5, repeat: 1, yoyo: true, ease: Power2.easeInOut },
+    {
+      scaleX: 1.5,
+      repeat: 1,
+      yoyo: true,
+      ease: Power2.easeInOut,
+      svgOrigin: '50 50'
+    },
     0.125
   );
 });
