@@ -28,13 +28,13 @@ toggleMenu
   .to(lineTwo, 0.065, { scaleX: 0 })
   .to(
     lineOne,
-    0.125,
+    0.45,
     { transformOrigin: '50% 50%', y: 22, ease: Power2.easeInOut },
     'slide'
   )
   .to(
     lineThree,
-    0.125,
+    0.45,
     {
       transformOrigin: '50% 50%',
       y: -22,
@@ -42,6 +42,7 @@ toggleMenu
     },
     'slide'
   )
+  .to(hamburger, 0.75, { rotation: 360, ease: Power4.easeInOut })
   .to(lineOne, 0.25, { rotation: -45, ease: Power2.easInOut }, 'cross')
   .to(lineThree, 0.25, { rotation: 45, ease: Power2.easInOut }, 'cross');
 
