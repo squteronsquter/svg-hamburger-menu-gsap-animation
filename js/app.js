@@ -29,20 +29,21 @@ toggleMenu
   .to(
     lineOne,
     0.125,
-    { rotation: 45, transformOrigin: '50% 50%', y: 22, ease: Power2.easeInOut },
-    'cross'
+    { transformOrigin: '50% 50%', y: 22, ease: Power2.easeInOut },
+    'slide'
   )
   .to(
     lineThree,
     0.125,
     {
-      rotation: -45,
       transformOrigin: '50% 50%',
       y: -22,
       ease: Power2.easeInOut
     },
-    'cross'
-  );
+    'slide'
+  )
+  .to(lineOne, 0.25, { rotation: -45, ease: Power2.easInOut }, 'cross')
+  .to(lineThree, 0.25, { rotation: 45, ease: Power2.easInOut }, 'cross');
 
 hamburger.addEventListener('click', _ => {
   hamburger.classList.toggle('js-xmenu');
